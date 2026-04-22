@@ -1,4 +1,6 @@
 import requests
+import os
+from dotenv import load_dotenv
 from datetime import datetime
 
 class WeatherManager:
@@ -61,8 +63,11 @@ class WeatherManager:
 #main
 if __name__ == "__main__":
     
-    bot=WeatherManager("4e6fd757bc0e738b9c33c7822edb5411")
-    data=bot.get_current_weather("Dhanbad")
+    load_dotenv()
+    api_key = os.getenv("WEATHER_API_KEY")
+    bot=WeatherManager(api_key)
+    data=bot.get_current_weather("Dhanbad") 
+    #you can change the name as per your requirement or the script as module. I need a teacher and don't have money. Help!!!!
     bot.display_current_report(data)
 
 
