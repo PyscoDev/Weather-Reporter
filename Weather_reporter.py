@@ -67,7 +67,7 @@ if __name__ == "__main__":
     api_key = os.getenv("WEATHER_API_KEY")
     bot=WeatherManager(api_key)
     data=bot.get_current_weather("Dhanbad") 
-    #you can change the name as per your requirement or the script as module. I need a teacher and don't have money. Help!!!!
+    #you can change the name as per your requirement or use the script as module. I need a teacher and don't have money. Help!!!!
     bot.display_current_report(data)
 
 
